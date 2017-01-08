@@ -1,0 +1,51 @@
+//Statistics
+function show_statistics(){
+	var table="<h1>Statistics</h1><div>";
+	//alert("Here");
+	var item = "<div style='width: 25%;float:left;display:inline-block;text-align: right;padding-bottom: 0.3em;'>";
+	var content = "<div style='width: 74%;border-left-color: #9900FF; border-left-style:solid;float:left;display:inline-block;padding-bottom: 0.3em;'>";
+	table=table+item+"37521"+"</div>"+content+"Number of Proteins"+"</div>";
+	table=table+item+"36758"+"</div>"+content+"Number of Proteins Name with 'mechano'"+"</div>";
+	table=table+item+"763"+"</div>"+content+"Number of Proteins Name without 'mechano'"+"</div>";
+	table=table+item+"7990"+"</div>"+content+"Number of Proteins with Family Info"+"</div>";
+	table=table+item+"29531"+"</div>"+content+"Number of Proteins No Family Info (in uniprot)"+"</div>";
+	table=table+item+"10846"+"</div>"+content+"Number of Organisms"+"</div>";
+	table=table+item+"146"+"</div>"+content+"Number of Proteins with Tissue Specificity Info"+"</div>";
+	table=table+item+"19"+"</div>"+content+"Number of Proteins with Expression Inducer Info"+"</div>";
+	table=table+item+"35143"+"</div>"+content+"Number of Proteins with GO"+"</div>";
+	table=table+item+"258 / 4164(all)"+"</div>"+content+"Number of GO CC"+"</div>";
+	table=table+item+"259 / 11185(all)"+"</div>"+content+"Number of GO MF"+"</div>";
+	table=table+item+"930 / 29741(all)"+"</div>"+content+"Number of GO BP"+"</div>";
+	table=table+item+"10800"+"</div>"+content+"Number of Articles"+"</div>";
+	table=table+item+"829"+"</div>"+content+"Number of Articles with 'mechano' or 'force'"+"</div>";
+	table=table+item+"2763"+"</div>"+content+"Number of Articles with 'mechano'(Pubmed)"+"</div>";
+	table+="</div>";
+	//alert(table);
+	var table2="<h2>Enriched GO Term</h2><div>";
+	item = "<div style='width: 25%;float:left;display:inline-block;text-align: right;padding-bottom: 0.3em;'>";
+	content = "<div style='width: 74%;border-left-color: #9900FF; border-left-style:solid;float:left;display:inline-block;padding-bottom: 0.3em;'>";
+	//table2=table2+item+"Number of Proteins"+"</div>"+content+"Name(GO)"+"</div>";
+	table2=table2+item+"33851"+"</div>"+content+"integral component of membrane(CC)"+"</div>";
+	table2=table2+item+"22375"+"</div>"+content+"transmembrane transport(BP)"+"</div>";
+	table2=table2+item+"8441"+"</div>"+content+"ion channel activity(MF)"+"</div>";
+	table2=table2+item+"7053"+"</div>"+content+"plasma membrane(CC)"+"</div>";
+	table2=table2+item+"2932"+"</div>"+content+"mechanically-gated ion channel activity(MF)"+"</div>";
+	table2=table2+item+"2320"+"</div>"+content+"cellular response to osmotic stress(BP)"+"</div>";
+	table2=table2+item+"711"+"</div>"+content+"membrane(CC)"+"</div>";
+	table2=table2+item+"253"+"</div>"+content+"calcium ion binding(MF)"+"</div>";
+	table2=table2+item+"187"+"</div>"+content+"ATP binding(MF)"+"</div>";
+	table2=table2+item+"150"+"</div>"+content+"mechanosensory behavior(BP)"+"</div>";
+	table2=table2+item+"126"+"</div>"+content+"integral component of plasma membrane(CC)"+"</div>";
+	table2=table2+item+"124"+"</div>"+content+"cytoplasm(CC)"+"</div>";
+	table2=table2+item+"119"+"</div>"+content+"nucleus(CC)(CC)"+"</div>";
+	table2=table2+item+"118"+"</div>"+content+"mechanoreceptor differentiation(BP)"+"</div>";
+	table2=table2+item+"96"+"</div>"+content+"positive regulation of synapse assembly(BP)"+"</div>";
+	table2=table2+item+"95"+"</div>"+content+"receptor complex(CC)"+"</div>";
+	table2=table2+item+"94"+"</div>"+content+"circadian rhythm(BP)"+"</div>";
+	table2=table2+item+"67"+"</div>"+content+"positive regulation of neuron projection development(BP)"+"</div>";
+	table2=table2+item+"67"+"</div>"+content+"positive regulation of gene expression(BP)"+"</div>";
+	table2=table2+item+"67"+"</div>"+content+"cell volume homeostasis(BP)"+"</div>";
+	table2+="</div>";
+	
+	document.getElementById("maincontent").innerHTML=table+table2;
+}

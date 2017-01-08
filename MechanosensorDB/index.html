@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<!--Luezhen's Main Web Page Template-->
+<head>
+<meta http-equiv="content-Type" content="text/html;charset=utf-8"/>
+<title>MechanosensorDB</title>
+<style>
+<!-- 
+@import url(Structure.css);
+--> 
+</style>
+<script language="JavaScript">
+	function eventclick(i){
+		switch(i){
+			case 1:document.getElementById('right').innerHTML="<img src='Your_Image2.jpeg' alt='Your_Image2.jpeg' width='100%'>";document.getElementById('maincontent').style.width="60%";document.getElementById('left').style.width="19%";document.getElementById('right').style.width="18%";document.getElementById("left").style.display="block";break; //Home Page JS
+			case 2:document.getElementById('maincontent').style.width="60%";document.getElementById('left').style.width="19%";document.getElementById('right').style.width="18%";document.getElementById("left").style.display="block";break;
+			case 3:document.getElementById('maincontent').style.width="60%";document.getElementById('left').style.width="19%";document.getElementById('right').style.width="18%";document.getElementById("left").style.display="block";break;
+			case 4:document.getElementById('maincontent').style.width="60%";document.getElementById('left').style.width="19%";document.getElementById('right').style.width="18%";document.getElementById("left").style.display="block";break;
+//			case 5:document.getElementById('right').innerHTML="Case 5";document.getElementById('maincontent').style.width="60%";document.getElementById('left').style.width="19%";document.getElementById('right').style.width="18%";document.getElementById("left").style.display="block";break;
+			default:document.getElementById('right').innerHTML="<img src='Your_Image2.jpeg' alt='Your_Image2.jpeg' width='100%'>";document.getElementById('maincontent').style.width="60%";document.getElementById('left').style.width="19%";document.getElementById('right').style.width="18%";document.getElementById("left").style.display="block";
+		}
+		}
+</script>
+<!--Date-->
+<script language="JavaScript">
+	var timer=window.setInterval("mydate()",1);
+	function mydate(){
+	var date=new Date();
+	var week=Array(7);
+	week=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+	document.getElementById('time').innerHTML="Welcome to MechanosensorDB!<br \\>The current time:<br \\>"+date.getFullYear()+"."+(date.getMonth()+1)+"."+date.getDate()+" "+ week[date.getDay()]+"<br \\>"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"<br \\>";
+}
+</script>
+<!--HomePage.js, BrowsePage_ProteinName.js-->
+<script language="JavaScript" src="HomePage.js"></script>
+
+<script language="JavaScript" src="BrowsePage_ProteinName.js"></script>
+<!--File_Test.js-->
+<script language="JavaScript" src="File_Test.js"></script>
+
+<script language="JavaScript" src="ProteinPage.js"></script>
+
+<script language="JavaScript" src="Search.js"></script>
+<script language="JavaScript" src="Statistics.js"></script>
+<script language="JavaScript" src="About.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!--wrapper.head-->
+	<div id="head">
+	<div id="title">MechanosensorDB</div>
+	<!--wrapper.head.menu-->
+	<div id="menu">
+		<table style="z-index:5;position:relative;"><tr>
+		<td onMouseOut="javascript:this.style.background='SpringGreen'" onMouseover="javascript:this.style.background='#FF7F50'" onclick="eventclick(1);Show_HomePage();">Home
+		</td>
+		<td onMouseOut="javascript:this.style.background='SpringGreen'" onMouseover="javascript:this.style.background='#FF7F50'" >Browse
+		<ul>
+		<li onclick="eventclick(2);Show_BrowseProteinName('Protein_Name');">Protein Name</li>
+		<li onclick="">Protein Family</li>
+		<li onclick="eventclick(2);Show_BrowseProteinName('CC');">GO_CC</li>
+		<li onclick="eventclick(2);Show_BrowseProteinName('BP');">GO_BP</li>
+		<li onclick="eventclick(2);Show_BrowseProteinName('MF');">GO_MF</li>
+		<li onclick="">Pathway</li>
+		<li onclick="eventclick(2);Show_BrowseProteinName('Species');">Species</li>
+		</ul>
+		</td>
+		<td onMouseOut="javascript:this.style.background='SpringGreen'" onMouseover="javascript:this.style.background='#FF7F50'" onclick="eventclick(3);show_statistics();">Statistics</td>
+		<td onMouseOut="javascript:this.style.background='SpringGreen'" onMouseover="javascript:this.style.background='#FF7F50'" onclick="eventclick(4);show_About();">About</td>
+		</tr></table>
+	</div>
+	<div id="search">
+		<input type="text" id="key_word" style="width: 60%"><button type="button" onclick="search_catch()" style="width: 20%">SEARCH</button>
+	</div>
+	</div>
+	<!--wrapper.left-->
+	<div id="left">
+		<div id="time"></div>
+		<div id="pic"><img src="Your_Image1.png" alt="Your_Image1.png" width="100%"></div>
+	</div>
+	<!--wrapper.maincontent-->
+	<div id="maincontent"><script language="JavaScript">Show_HomePage();</script>
+	</div>
+	<div id="right" ><img src="Your_Image2.jpeg" alt="Your_Image2.jpeg" width='100%'></div>
+</div>
+<div id="footer">All rights reserved by Luezhen</div>
+</body>
+</html>
